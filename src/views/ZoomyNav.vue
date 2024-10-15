@@ -820,7 +820,9 @@
           inkscape:connector-curvature="0"
         />
       </g>
-
+      <g id="step-two-form">
+        <StepTwoForm v-if="showForm" @save-form="saveForm"></StepTwoForm>
+      </g>
       <g style="display: inline" id="step-two">
         <ellipse
           style="
@@ -960,9 +962,6 @@
         rx="14.904257"
         ry="6.8232021"
       />
-    </g>
-    <g id="step-two-form">
-      <StepTwoForm v-if="showForm" @save-form="saveForm"></StepTwoForm>
     </g>
   </svg>
 </template>

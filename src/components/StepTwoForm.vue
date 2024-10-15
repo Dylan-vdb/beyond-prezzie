@@ -1,13 +1,13 @@
 <template>
-  <foreignObject y="442.56894" x="284.5" height="53.585438" width="56.347572">
+  <foreignObject y="440" x="280" height="59" width="63">
     <div
       style="
         position: relative;
         border: 1px dotted #0000ff00;
-        width: 300px;
-        height: 288px;
+        width: 200px;
+        height: 180px;
         transform-origin: 0 0;
-        transform: scale(0.17);
+        transform: scale(0.28);
         overflow: hidden;
         z-index: 1000;
       "
@@ -16,10 +16,9 @@
         I am a vue form component embedded inside this SVG within it's inherently scalable/zoomable
         world.
       </p>
-      <p style="font-size: 15px">I could therefore include a video or a map or whatever.</p>
+      <p>I could therefore include a video or a map or whatever.</p>
 
       <base-input-text
-        style="cursor: pointer"
         v-model="howMuchItRocks"
         label="How much does this rock!!!?"
       ></base-input-text>
@@ -49,3 +48,9 @@ export default defineComponent({
   }
 })
 </script>
+
+<style scoped>
+p {
+  font-size: 0.5rem;
+}
+</style>

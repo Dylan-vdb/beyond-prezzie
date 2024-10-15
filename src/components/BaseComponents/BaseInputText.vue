@@ -1,15 +1,13 @@
 <template>
-  <div>
-    <div class="base-input">
-      <label v-if="label">{{ label }}</label>
-      <input
-        type="text"
-        :value="modelValue"
-        :style="cssVars"
-        v-bind="$attrs"
-        @input="updateValue($event.target.value)"
-      />
-    </div>
+  <div class="base-input">
+    <label v-if="label">{{ label }}</label>
+    <input
+      type="text"
+      :value="modelValue"
+      :style="cssVars"
+      v-bind="$attrs"
+      @input="updateValue($event.target.value)"
+    />
   </div>
 </template>
 
@@ -48,11 +46,14 @@ export default defineComponent({
 </script>
 
 <style>
+.base-input {
+  /* transform: scale(0.8); */
+}
 input {
   border: none;
   border-bottom: 1px solid #000000;
   line-height: normal;
-  height: 40px;
+  height: 20px;
   width: var(--input-width);
 }
 input:focus {

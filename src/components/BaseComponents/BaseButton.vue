@@ -1,21 +1,17 @@
 <template>
-  <button
-    v-bind="$attrs"
-    class="base-button"
-    :class="{ block: block, [type]: true }"
-  >
+  <button v-bind="$attrs" class="base-button" :class="{ block: block, [type]: true }">
     <slot></slot>
   </button>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent } from 'vue'
 export default defineComponent({
   inheritAttrs: false,
   props: {
     type: {
       type: String,
-      default: "black-square"
+      default: 'black-square'
     },
     block: {
       // Allows consumer to add block attribut to element resulting in the button filling available width.  Any existing button can therefore be a block-button.
@@ -23,7 +19,7 @@ export default defineComponent({
       default: false
     }
   }
-});
+})
 </script>
 
 <style>
@@ -34,24 +30,25 @@ button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 55px;
+  height: 25px;
   padding: 0 40px;
   background: transparent;
   border: none;
   border-radius: 27px;
   text-align: center;
-  /* not sure what font-weight should be, but this one is way too much compared to style guides*/
   font-weight: 600;
-  font-size: 18px;
+  font-size: 8px;
   white-space: nowrap;
   transition: all 0.2s linear;
-  min-width: 110px;
-  margin: 3px 8px;
+  min-width: 55px;
+  margin: 3px 4px;
   cursor: pointer;
 }
 .base-button:hover {
   /* transform: scale(1.01); */
-  box-shadow: 0 7px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow:
+    0 7px 17px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .base-button:active {
   transform: scale(0.9);
