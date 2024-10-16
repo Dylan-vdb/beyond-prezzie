@@ -46,9 +46,6 @@ export default defineComponent({
 </script>
 
 <style>
-.base-input {
-  /* transform: scale(0.8); */
-}
 input {
   border: none;
   border-bottom: 1px solid #000000;
@@ -71,6 +68,7 @@ input::placeholder {
 
 .base-input label {
   display: block;
-  font-size: 20px;
+  font-size: 12px;
+  padding: 10px 0;
 }
 </style>

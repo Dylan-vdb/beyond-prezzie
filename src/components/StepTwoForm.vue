@@ -1,5 +1,5 @@
 <template>
-  <foreignObject y="440" x="280" height="59" width="63">
+  <foreignObject y="445" x="283.5" height="59" width="63">
     <div
       style="
         position: relative;
@@ -22,7 +22,9 @@
         v-model="howMuchItRocks"
         label="How much does this rock!!!?"
       ></base-input-text>
-      <base-button @click="$emit('save-form', howMuchItRocks)">Use form inputs in app</base-button>
+      <base-button class="submit-button" @click="$emit('save-form', howMuchItRocks)"
+        >Use form inputs in app</base-button
+      >
     </div>
   </foreignObject>
 </template>
@@ -52,5 +54,9 @@ export default defineComponent({
 <style scoped>
 p {
   font-size: 0.5rem;
+}
+
+.submit-button {
+  margin-top: 10px;
 }
 </style>

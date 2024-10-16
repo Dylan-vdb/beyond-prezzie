@@ -1,5 +1,5 @@
 <template>
-  <div v-if="showToolbar" id="control-panel">
+  <div v-if="showToolbar" id="control-panel" style="transform: scale(1.5)">
     <base-button @click="handoverToParent">Hand over to Parent</base-button>
     <!-- <base-button @click="stepForward">Step Forward</base-button> -->
     <base-button v-if="rotationNavigation" @click="rotationNavigation.zoomInDigits"
