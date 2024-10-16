@@ -1,5 +1,5 @@
 <template>
-  <div v-if="showToolbar" id="control-panel" style="transform: scale(1.5)">
+  <div v-if="showToolbar" id="control-panel">
     <base-button @click="handoverToParent">Hand over to Parent</base-button>
     <!-- <base-button @click="stepForward">Step Forward</base-button> -->
     <base-button v-if="rotationNavigation" @click="rotationNavigation.zoomInDigits"
@@ -531,7 +531,7 @@
         x="496.28842"
         y="424.146"
       />
-      <g style="display: inline" id="g874">
+      <!-- <g style="display: inline" id="g874">
         <rect
           y="0"
           x="4.3596542e-06"
@@ -580,7 +580,7 @@
             I'm the fully zoomed out view
           </tspan>
         </text>
-      </g>
+      </g> -->
     </g>
     <g
       inkscape:groupmode="layer"
@@ -1130,12 +1130,29 @@ svg {
 }
 
 #control-panel {
+  z-index: 10;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
   position: absolute;
   bottom: 0;
   right: 0;
+  /* transform-origin: center;
+  transform: scale(1.5); */
   width: 100vw;
+  padding: 0 20px;
   height: 80px;
   background-color: var(--selected);
-  /* display: none; */
+}
+
+/* #control-panel .base-button.black-square {
+  transform: scale(1.5);
+} */
+
+@media (max-width: 600px) {
+  #control-panel {
+    width: 100vw;
+    bottom: 70px;
+  }
 }
 </style>
